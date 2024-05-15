@@ -1,4 +1,4 @@
-import PropertyList from "../../components/PropertyList";
+import PropertyList from "./PropertyList";
 
 function Home() {
   return (

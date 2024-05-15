@@ -1,6 +1,7 @@
 import axios from "axios";
-import { toast } from "react-toastify";
+import notify from "./notificationService";
 
+// Configure interceptor for unexpected errors
 axios.interceptors.response.use(null, (error) => {
   const expectedError =
     error.response &&
@@ -8,8 +9,7 @@ axios.interceptors.response.use(null, (error) => {
     error.response.status < 500;
 
   if (!expectedError) {
-    console.log("Logging the error", error);
-    toast.error("An unexpected error occurred.");
+    notify.error("An unexpected error occurred.");
   }
 
   return Promise.reject(error);
