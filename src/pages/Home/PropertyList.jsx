@@ -18,7 +18,13 @@ function PropertyList() {
     fetchProperties();
   }, []);
 
-  return <h1>List Group</h1>;
+  return (
+    <div>
+      {properties.map((item, idx) => (
+        <p>{JSON.stringify(item)}</p>
+      ))}
+    </div>
+  );
 }
 
 export default PropertyList;
