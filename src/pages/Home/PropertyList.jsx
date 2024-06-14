@@ -21,7 +21,7 @@ function PropertyList() {
   return (
     <div>
       {properties.map((item, idx) => (
-        <p>{JSON.stringify(item)}</p>
+        <p key={idx}>{JSON.stringify(item)}</p>
       ))}
     </div>
   );
