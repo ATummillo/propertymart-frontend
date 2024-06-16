@@ -15,6 +15,9 @@ axios.interceptors.response.use(null, (error) => {
   return Promise.reject(error);
 });
 
+// Configure the base URL
+axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
+
 const requests = {
   get: axios.get,
   post: axios.post,
