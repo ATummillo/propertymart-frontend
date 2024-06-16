@@ -45,3 +45,6 @@ yarn-debug.log*
 yarn-error.log*
 # Sentry Config File
 .sentryclirc
+
+# environment variables
+.env
